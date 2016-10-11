@@ -2,6 +2,3 @@
 
 [nodejs 极客学院中文文档](http://wiki.jikexueyuan.com/project/nodejs/)  
 [Buffer(数据块)极客学院中文文档](http://wiki.jikexueyuan.com/project/nodejs/buffer.html)
-~~~
-注：如果打不开，请使用vpn访问
-~~~
