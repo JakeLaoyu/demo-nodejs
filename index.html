@@ -1,17 +1,34 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>文件上传表单</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
 
 <body>
-    <h3>文件上传：</h3>
-    选择一个文件上传: <br />
-    <form action="/file_upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="image" size="50" />
-        <br />
-        <input type="submit" value="上传文件" />
-    </form>
+    <script>
+        function loadScript(url, func) {
+            var head = document.head || document.getElementByTagName('head')[0];
+            var script = document.createElement('script');
+            script.src = url;
+            script.onload = script.onreadystatechange = function() {
+                if (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') {
+                    func();
+                    script.onload = script.onreadystatechange = null;
+                }
+            };
+            head.insertBefore(script, 0);
+        }
+        window.baidu = {
+            sug: function(data) {
+                console.log(data);
+            }
+        }
+        loadScript('http://suggestion.baidu.com/su?wd=w', function() {
+            console.log('loaded')
+        });
+    </script>
 </body>
 
 </html>
